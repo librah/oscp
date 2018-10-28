@@ -8,6 +8,7 @@
 3. attemp to login web / ssh / ftp using common id passwords
   - id: `root`, `admin`
   - password: `root`, `toor`, `password`, `passw0rd`, `admin`, no password
+4. if there is a proxy server run on the target, try to set browser's proxy point to the proxy server
 
 ## recon
 ### HTTP and HTTPs
