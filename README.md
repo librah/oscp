@@ -11,8 +11,11 @@
 
 ## recon
 ### HTTP and HTTPs
-
-
+1. dirbuster (gui)
+2. nikto -h 10.11.1.115 -p 80 -output ~/tmp/10.11.1.115/scans/10.11.1.115_80_nikto.txt
+  - nikto -h http://10.11.1.115/somedir -output
+3. wpscan to find wordpress problems
+4. cms scan (? todo: read it from a tool)
 
 ## password hash cracking
 Cloud:
