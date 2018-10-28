@@ -20,12 +20,27 @@ Cloud:
 - https://www.md5online.org/
 
 Local tools:
+- hash-identifier
 - john
+```bash
+unshadow passwd.txt shadow.txt > unshadowed.txt
+john --wordlist=/usr/share/wordlists/rockyou.txt --fork=4 unshadowed.txt
+```
 - hashcat
+```bash
+unshadow passwd.txt shadow.txt > unshadowed.txt
+hashcat -m 0 -a 0 unshadowed.txt /usr/share/wordlists/rockyou.txt  # md5
+hashcat -m 400 -a 0 unshadowed.txt /usr/share/wordlists/rockyou.txt  # WordPress (MD5)
+```
+To find hash type,
+```bash
+hashcat --help | grep -i wordpress
+```
 
 Wordlist:
-- rockyou
-- seclist
+- `/usr/share/wordlists/rockyou.txt`
+- `/usr/share/seclists/Passwords/phpbb.txt`
+- `/usr/share/seclists/Passwords/10k_most_common.txt`
 
 For CTF / OSCP, should not take you more than 30 mins to crack
 
