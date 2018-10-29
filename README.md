@@ -43,6 +43,8 @@ To find hash type,
 hashcat --help | grep -i wordpress
 ```
 
+Hash type examples: https://hashcat.net/wiki/doku.php?id=example_hashes
+
 Wordlist:
 - `/usr/share/wordlists/rockyou.txt`
 - `/usr/share/seclists/Passwords/phpbb.txt`
