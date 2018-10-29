@@ -33,8 +33,10 @@ john --wordlist=/usr/share/wordlists/rockyou.txt --fork=4 unshadowed.txt
 - hashcat
 ```bash
 unshadow passwd.txt shadow.txt > unshadowed.txt
-hashcat -m 0 -a 0 unshadowed.txt /usr/share/wordlists/rockyou.txt  # md5
-hashcat -m 400 -a 0 unshadowed.txt /usr/share/wordlists/rockyou.txt  # WordPress (MD5)
+hashcat -m 0 -a 0 unshadowed.txt -o unshadowed_cracked.txt --remove /usr/share/wordlists/rockyou.txt  # md5
+hashcat -m 400 -a 0 unshadowed.txt -o unshadowed_cracked.txt --remove /usr/share/wordlists/rockyou.txt  # WordPress (MD5)
+hashcat -m 1600 -a 0 unshadowed.txt -o unshadowed_cracked.txt  --remove /usr/share/wordlists/rockyou.txt  # $6$ Linux SHA-256
+hashcat -m 0 -a 0 -D 2 unshadowed.txt -o unshadowed_cracked.txt  --remove /usr/share/wordlists/rockyou.txt # use GPU
 ```
 To find hash type,
 ```bash
