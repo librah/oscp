@@ -47,6 +47,7 @@ Wordlist:
 - `/usr/share/wordlists/rockyou.txt`
 - `/usr/share/seclists/Passwords/phpbb.txt`
 - `/usr/share/seclists/Passwords/10k_most_common.txt`
+- https://github.com/danielmiessler/SecLists
 
 For CTF / OSCP, should not take you more than 30 mins to crack
 
