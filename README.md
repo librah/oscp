@@ -6,9 +6,11 @@
 1. zenmap intensive scan
 2. zenmap full tcp scan
 3. attemp to login web / ssh / ftp using common id passwords
-  - id: `root`, `admin`
-  - password: `root`, `toor`, `password`, `passw0rd`, `admin`, no password
+    - id: `root`, `admin`
+    - password: `root`, `toor`, `password`, `passw0rd`, `admin`, no password
 4. if there is a proxy server run on the target, try to set browser's proxy point to the proxy server
+    - use `auxiliary/scanner/http/squid_pivot_scanning` metasploit module for squid/proxy scan, ref: [SickOS 1.1](https://highon.coffee/blog/sickos-1-walkthrough/).
+5. for wireshark vulnerability, follow https://highon.coffee/blog/sickos-1-walkthrough/ to get reverse shell via Burp
 
 ## recon
 ### HTTP and HTTPs
