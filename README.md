@@ -112,6 +112,17 @@ Reference:
 - https://www.windows-commandline.com/enable-remote-desktop-command-line/
 
 
+## transfer files
+Run http server
+```shell
+python -m SimpleHTTPServer 80
+```
+
+Run ftp server
+```shell
+python -m pyftpdlib
+```
+
 ## references
 - https://sushant747.gitbooks.io/total-oscp-guide/
 - https://www.securitysift.com/offsec-pwb-oscp/
