@@ -26,6 +26,18 @@
 1. if there is a proxy server run on the target, try to set browser's proxy pointing to the proxy server
     - use `auxiliary/scanner/http/squid_pivot_scanning` metasploit module for squid/proxy scan, ref: [SickOS 1.1](https://highon.coffee/blog/sickos-1-walkthrough/).
 1. it's possible that the server only allow certain user-agent to connect. Check it.
+1. Find text and links
+    - curl -i <url> -s | html2text
+    ```python
+    from BeautifulSoup import BeautifulSoup
+    import urllib2
+    import re
+
+    html_page = urllib2.urlopen("http://www.yourwebsite.com")
+    soup = BeautifulSoup(html_page)
+    for link in soup.findAll('a'):
+        print link.get('href')
+    ```
 1. for wireshark vulnerability, follow https://highon.coffee/blog/sickos-1-walkthrough/ to get reverse shell via Burp
 1. if there is a MySQL database related to the app, find if any config.php or other php containing the database access id/password.
     ```php
