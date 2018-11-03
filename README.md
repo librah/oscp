@@ -140,6 +140,16 @@ Run ftp server
 python -m pyftpdlib
 ```
 
+## Linux privilege escalation
+- Linux https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
+- Tools
+    - https://github.com/rebootuser/LinEnum
+    - www.securitysift.com/download/linuxprivchecker.py
+    - http://pentestmonkey.net/tools/audit/unix-privesc-check
+- when searching exploits, search not only kernal but also distribution to increase coverage
+  - `searchsploit kernel 3.x`
+  - `searchsploit ubuntu 14.04`
+
 ## references
 - https://sushant747.gitbooks.io/total-oscp-guide/
 - https://www.securitysift.com/offsec-pwb-oscp/
