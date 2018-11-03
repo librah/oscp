@@ -50,6 +50,11 @@
     define('TABLE_PREFIX', '');
     ```
 
+## show NFS mount dir content
+- `showmount -e ip_address`
+- `mount -t nfs ip:/dir_to_mount local_mount_path -o nolock`
+
+
 ## password hash cracking
 Cloud:
 - https://crackstation.net/
@@ -148,6 +153,9 @@ python -m pyftpdlib
     - https://github.com/rebootuser/LinEnum
     - www.securitysift.com/download/linuxprivchecker.py
     - http://pentestmonkey.net/tools/audit/unix-privesc-check
+- Check if any suid executables that can be used.
+    - ex: `cp`, `cat` will then be able to read everything
+    - ex: `vi` will be able to get to `!bash`
 - when searching exploits, search not only kernal but also distribution to increase coverage
   - `searchsploit kernel 3.x`
   - `searchsploit ubuntu 14.04`
