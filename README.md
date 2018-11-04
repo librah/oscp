@@ -105,8 +105,9 @@ For CTF / OSCP, should not take you more than 30 mins to crack
 python -c "import pty; pty.spawn('/bin/bash')"
 ```
 
-## windows binary examine
-- `strings executable_filename` to see symbols inside the file.. you may find the hardcoded id/password
+## windows/linux binary examine
+- `strings executable_filename` to see symbols inside the file.. you may find the hardcoded id/password.  If there is `strcpy()` api usage, then the executable might be vulnerable to buffer overflow.
+- `objdump -D executable_filename` to see the assembly code.. You can search "jmp xxx" instruction. 
 - if the web site contains some windows PE, might worth to try buffer overflow attacks
 
 ## buffer overflow attack
