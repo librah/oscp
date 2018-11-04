@@ -50,9 +50,15 @@
     define('TABLE_PREFIX', '');
     ```
 
+### rlogin smtp enumeration
+- if you see `rlogin`.. try to enumerate users via smtp, finger, or other method..  then for each found user, try to rlogin with the user..  chances are, some user id does not enforce any password check
+  - kali linux's `rlogin` is symbolic linked to `ssh`.  Use the `putty` on Linux instead.ls -lF
+  
+
 ## show NFS mount dir content
 - `showmount -e ip_address`
-- `mount -t nfs ip:/dir_to_mount local_mount_path -o nolock`
+- `mount -t nfs ip:/dir_to_mount local_mount_path`
+  - if the mount nfs can't be read.. it's due to on the remote nsf configuration (/etc/fstab) like enabling root squashing.  What you need to do is to find out which uid/gid (on the remote) owns this directory..  then create a temp user with the same uid/gid on the local.. then you should be able to view the mount directory
 
 
 ## password hash cracking
