@@ -212,6 +212,11 @@ python -m pyftpdlib
   - `searchsploit kernel 3.x`
   - `searchsploit ubuntu 14.04`
 
+## Windows priviledge escalation
+- https://github.com/frizb/Windows-Privilege-Escalation
+- https://411hall.github.io/JAWS-Enumeration/
+- https://github.com/joshruppe/winprivesc/blob/master/winprivesc.bat
+
 ## references
 - https://sushant747.gitbooks.io/total-oscp-guide/
 - https://www.securitysift.com/offsec-pwb-oscp/
