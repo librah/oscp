@@ -105,6 +105,10 @@ For CTF / OSCP, should not take you more than 30 mins to crack
 python -c "import pty; pty.spawn('/bin/bash')"
 ```
 
+## windows binary examine
+- `strings executable_filename` to see symbols inside the file.. you may find the hardcoded id/password
+- if the web site contains some windows PE, might worth to try buffer overflow attacks
+
 ## create user account
 Linux:
 
