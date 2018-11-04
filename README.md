@@ -111,6 +111,9 @@ python -c "import pty; pty.spawn('/bin/bash')"
 - if the web site contains some windows PE, might worth to try buffer overflow attacks
 
 ## buffer overflow attack
+- windows debugger: immunity debugger
+- linux debugger: `edb --run file_to_run`
+- standalone executable crash: `some_executable $(python -c 'print "A"*100')`
 - Generate pattern: https://projects.jason-rush.com/tools/buffer-overflow-eip-offset-string-generator/
 - Find bad char: 
 ```python
