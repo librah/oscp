@@ -109,6 +109,10 @@ python -c "import pty; pty.spawn('/bin/bash')"
 - `strings executable_filename` to see symbols inside the file.. you may find the hardcoded id/password
 - if the web site contains some windows PE, might worth to try buffer overflow attacks
 
+## buffer overflow attack
+### Generate pattern
+- https://projects.jason-rush.com/tools/buffer-overflow-eip-offset-string-generator/
+
 ## create user account
 Linux:
 
