@@ -107,7 +107,9 @@ python -c "import pty; pty.spawn('/bin/bash')"
 
 ## windows/linux binary examine
 - `strings executable_filename` to see symbols inside the file.. you may find the hardcoded id/password.  If there is `strcpy()` api usage, then the executable might be vulnerable to buffer overflow.
-- `objdump -D executable_filename` to see the assembly code.. You can search "jmp xxx" instruction. 
+- `objdump -D executable_filename` to see the assembly code. You can use it to search certain `jmp` or `call` instruction
+    - `objdump -D executable | grep jmp | grep ebp`
+    - `objdump -D executable | grep call | grep eax` 
 - if the web site contains some windows PE, might worth to try buffer overflow attacks
 
 ## buffer overflow attack
@@ -130,7 +132,7 @@ badchars = ("\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f\x1
 ```
 !moma modules
 ```
-- Find x86 OP code
+- Look up x86 OP code
 ```sh
 /usr/share/metasploit-framework/tools/exploit/nasm_shell.rb
 nasm > jmp esp
