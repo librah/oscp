@@ -112,7 +112,7 @@ python -c "import pty; pty.spawn('/bin/bash')"
 
 ## buffer overflow attack
 - windows debugger: immunity debugger
-- linux debugger: `edb --run file_to_run`
+- linux debugger: `edb --run file_to_run arguments`
 - standalone executable crash: `some_executable $(python -c 'print "A"*100')`
 - Generate pattern: https://projects.jason-rush.com/tools/buffer-overflow-eip-offset-string-generator/
 - Find bad char: 
