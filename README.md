@@ -170,7 +170,10 @@ exploit_payload = 'A' * somesize + EIP + '\x90'*10 + reverse_shell_code
 
 ## create user account
 Linux:
-
+```shell
+adduser username
+usermod -aG sudo username  # add to sudo
+```
 
 Windows:
 ```
