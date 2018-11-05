@@ -58,7 +58,11 @@
 ## show NFS mount dir content
 - `showmount -e ip_address`
 - `mount -t nfs ip:/dir_to_mount local_mount_path`
-  - if the mount nfs can't be read.. it's due to on the remote nsf configuration (/etc/fstab) like enabling root squashing.  What you need to do is to find out which uid/gid (on the remote) owns this directory..  then create a temp user with the same uid/gid on the local.. then you should be able to view the mount directory
+  - if the mount nfs can't be read, it's probably due to nsf server configure the [root squashing](http://fullyautolinux.blogspot.com/2015/11/nfs-norootsquash-and-suid-basic-nfs.html) in `/etc/exports`.  What you need to do is to find out which uid/gid (on the remote) owns this directory, then create a temp user with the same uid/gid on the local, then you should be able to view the mount directory
+  - to disable root squashing
+    - modify the `/etc/fstab`:  `/home/vulnix    *(rw,no_root_squash,insecure)`
+    - restart nsf service or reboot
+    - remount.. then you should be able to access the mount dir using root id
 
 
 ## password hash cracking
@@ -225,6 +229,7 @@ python -m pyftpdlib
 - when searching exploits, search not only kernal but also distribution to increase coverage
   - `searchsploit kernel 3.x`
   - `searchsploit ubuntu 14.04`
+- if shell is set with suid bit, execute: `bash -p` to get root (see [here](https://www.linuxquestions.org/questions/programming-9/what-does-p-do-in-bin-bash-p-809364/) for why `-p`)
 
 ## Windows priviledge escalation
 - https://github.com/frizb/Windows-Privilege-Escalation
