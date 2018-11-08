@@ -25,6 +25,8 @@
     - `wpscan` (wordpress) - `wpscan -u http://192.168.56.223/bull/ --enumerate u --enumerate p` # scan vulnerable plugin and find user names
     - `joomscan` (joombla)
     - `drupalscan`(?)
+1. WebDAV scan
+    - `davtest -url http(s)://[IP]`
 1. guess the password by crawling the web page content
     - `cewl http://192.168.56.223/bull -m 3 -w /root/tmp/pass.txt`  # minimal word len: -m 3
     - `john --wordlist=pass.txt --rules --stdout > pass_mangled.txt` # mangle / combine passwords
@@ -69,6 +71,12 @@
     - restart nsf service or reboot
     - remount.. then you should be able to access the mount dir using root id
 
+## Enumerate SNMP (UDP 161) if it's open
+- `snmp-check -t [IP] -c public`
+
+## Enumerate SMB (TCP 139, 445) if it's open
+- `enum4linux [IP]`
+- `smbclient -L \\[IP]`
 
 ## password hash cracking
 Cloud:
@@ -255,4 +263,5 @@ python -m pyftpdlib
   - https://medium.com/@m4lv0id/and-i-did-oscp-589babbfea19
   - https://gist.github.com/unfo/5ddc85671dcf39f877aaf5dce105fac3
   - https://0daylego.wordpress.com/2017/04/29/scripting-my-way-through-the-oscp-labs/
+  - https://jhalon.github.io/OSCP-Review/
 - [OSCP Exam Guide](https://support.offensive-security.com/#!oscp-exam-guide.md)
