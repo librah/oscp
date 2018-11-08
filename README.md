@@ -223,7 +223,7 @@ python -m pyftpdlib
 ## Linux privilege escalation
 - Linux https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
 - Tools
-    - https://github.com/rebootuser/LinEnum
+    - https://github.com/rebootuser/LinEnum  `./LinEnum.sh -t` # detail scan
     - www.securitysift.com/download/linuxprivchecker.py
     - http://pentestmonkey.net/tools/audit/unix-privesc-check
 - Check if any suid executables that can be used.
