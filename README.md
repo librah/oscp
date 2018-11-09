@@ -245,6 +245,7 @@ python -m pyftpdlib
     - http://pentestmonkey.net/tools/audit/unix-privesc-check
 - Check if any suid executables that can be used.
     - ex: `cp`, `cat` will then be able to read everything
+    - ex: `nmap --interactive` will be able to get to `!sh`
     - ex: `vi` will be able to get to `!bash`
 - when searching exploits, search not only kernal but also distribution to increase coverage
   - `searchsploit kernel 3.x`
