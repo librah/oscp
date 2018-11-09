@@ -33,6 +33,7 @@
     - `hydra -l <login_name> -P ~/tmp/vulnhub/pass.txt 192.168.56.223 -V http-form-post '/bull/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log In&testcookie=1:S=Location'`  # brute force attack
     - `wpscan -u http://192.168.56.223/bull/ -U bully -w pass_mangled.txt` # brute force attack 
     - remember do `sort -u` making sure no dup tries
+    - for wordpress plugin, you can edit the 404 file (*Appearance -> Editor -> 404.Template*) to put the shell code.. Then curl an invalid page will get the shell code executed
 1. if there is a proxy server run on the target, try to set browser's proxy pointing to the proxy server
     - use `auxiliary/scanner/http/squid_pivot_scanning` metasploit module for squid/proxy scan, ref: [SickOS 1.1](https://highon.coffee/blog/sickos-1-walkthrough/).
 1. it's possible that the server only allow certain user-agent to connect. Check it.
