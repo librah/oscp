@@ -187,6 +187,7 @@ exploit_payload = 'A' * somesize + EIP + '\x90'*10 + reverse_shell_code
 ## compile and run windows binary on linux
 - `i686-w64-mingw32-gcc 646.c -lws2_32 -o 646.exe`
 - `wine 646.exe arguments`
+- include header files in: `/usr/share/mingw-w64/include`
 
 ## create user account
 Linux:
