@@ -161,7 +161,7 @@ badchars = ("\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f\x1
 ```
 - Find modules inside an windows PE (using immunity debugger)
 ```
-!moma modules
+!mona modules
 ```
 - Look up x86 OP code
 ```sh
