@@ -261,6 +261,7 @@ python -m pyftpdlib
 - https://sushant747.gitbooks.io/total-oscp-guide/
 - https://www.securitysift.com/offsec-pwb-oscp/
 - https://github.com/xapax/oscp
+- https://github.com/frizb?tab=repositories
 - Previlege escalation
   - Linux https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
   - Windows http://www.fuzzysecurity.com/tutorials/16.html
